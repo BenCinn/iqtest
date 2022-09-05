@@ -1,3 +1,4 @@
+const dev = process.env.NODE_ENV === 'development';
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 
@@ -10,7 +11,6 @@ const config = {
       // these options are set automatically — see below
       pages: 'build',
       assets: 'build',
-      fallback: 'index.html',
       precompress: false
     }),
 
@@ -20,5 +20,6 @@ const config = {
 		}
 	}
 };
+
 
 export default config;
