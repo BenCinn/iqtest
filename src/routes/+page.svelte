@@ -37,12 +37,12 @@ function ChangeAnswer(CurrQuestion, CurrAnswer){
 	<h2>
   <div class="flex flex-col space-y-10">
   {#each [1, 2, 3, 4, 5, 6, 7, 8] as question}
-    <img src={`/ques/q` + question + `.png`} />
+    <img src={`./ques/q` + question + `.png`} />
     <div class={`grid gap-3 grid-cols-4`}>{#each [1, 2, 3, 4, 5, 6, 7, 8] as answer}
     {#if TheAnswer[question - 1] == answer}
-      <button on:click|once={() => ChangeAnswer(question, answer)} ><img class="brightness-75 rounded-lg" src={`/ans/q` + question + `/` + answer + `.png`} /></button>
+      <button on:click|once={() => ChangeAnswer(question, answer)} ><img class="brightness-75 rounded-lg" src={`./ans/q` + question + `/` + answer + `.png`} /></button>
     {:else}
-     <button on:click|once={() => ChangeAnswer(question, answer)} ><img class="md:hover:shadow-lg rounded-lg" src={`/ans/q` + question + `/` + answer + `.png`} /></button>
+     <button on:click|once={() => ChangeAnswer(question, answer)} ><img class="md:hover:shadow-lg rounded-lg" src={`./ans/q` + question + `/` + answer + `.png`} /></button>
     {/if}{/each}</div>
   {/each}
   </div>
